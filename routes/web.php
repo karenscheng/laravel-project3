@@ -11,6 +11,11 @@
 |
 */
 
+use Illuminate\Http\Request;
+
+Route::get('/books', 'BookController@index');
+Route::post('/books', 'BookController@create');
+
 Route::get('/', function () {
     return view('welcome');
 });
