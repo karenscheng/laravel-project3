@@ -20,6 +20,13 @@ Route::get('/books/{id}', 'BookController@show');
 Route::put('/books/{id}', 'BookController@update');
 Route::delete('/books/{id}', 'BookController@destroy');
 
+Route::get('/genres', 'GenreController@index');
+Route::post('/genres', 'GenreController@create');
+
+Route::get('/genres/{id}', 'GenreController@show');
+Route::put('/genres/{id}', 'GenreController@update');
+Route::delete('/genres/{id}', 'GenreController@destroy');
+
 Route::get('/', function () {
     return view('welcome');
 });
