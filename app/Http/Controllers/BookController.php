@@ -21,4 +21,25 @@ class BookController extends Controller
       Book::create($request->all());
       return Response::json(['created' => true]);
     }
+
+    public function show ($id) {
+      $book = Book::find($id);
+      return Response::json($book);
+    }
+
+    public function update (Request $request, $id)
+    {
+      // PUT /books/$id
+      $book = Book::find($id);
+      $success = $book->update($request->all());
+      return Response::json(['updated' => $success]);
+    }
+
+    public function destroy ($id)
+    {
+      //remove a single book
+      $book = Book::find($id);
+      $book->delete();
+      return Response::json(['deleted' => true]);
+    }
 }

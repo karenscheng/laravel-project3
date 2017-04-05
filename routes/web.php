@@ -16,6 +16,10 @@ use Illuminate\Http\Request;
 Route::get('/books', 'BookController@index');
 Route::post('/books', 'BookController@create');
 
+Route::get('/books/{id}', 'BookController@show');
+Route::put('/books/{id}', 'BookController@update');
+Route::delete('/books/{id}', 'BookController@destroy');
+
 Route::get('/', function () {
     return view('welcome');
 });
