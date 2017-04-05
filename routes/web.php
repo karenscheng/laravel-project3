@@ -27,6 +27,13 @@ Route::get('/genres/{id}', 'GenreController@show');
 Route::put('/genres/{id}', 'GenreController@update');
 Route::delete('/genres/{id}', 'GenreController@destroy');
 
+Route::get('/authors', 'AuthorController@index');
+Route::post('/authors', 'AuthorController@create');
+
+Route::get('/authors/{id}', 'AuthorController@show');
+Route::put('/authors/{id}', 'AuthorController@update');
+Route::delete('/authors/{id}', 'AuthorController@destroy');
+
 Route::get('/', function () {
     return view('welcome');
 });
