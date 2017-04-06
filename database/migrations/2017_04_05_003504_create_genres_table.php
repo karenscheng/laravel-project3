@@ -15,7 +15,9 @@ class CreateGenresTable extends Migration
     {
       Schema::create('genres', function (Blueprint $table) {
         $table->increments('id');
-        $table->string('genre')->default('');
+        $table->string('genre')->default(''); //non-fiction or fiction
+        $table->string('subgenre')->default('');  //biography, fantasy, etc.
+        $table->boolean('favorite');
         $table->timestamps();
       });
     }

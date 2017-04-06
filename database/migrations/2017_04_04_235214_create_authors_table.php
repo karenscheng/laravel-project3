@@ -17,6 +17,7 @@ class CreateAuthorsTable extends Migration
         $table->increments('id');
         $table->string('authorFirst')->default('');
         $table->string('authorLast')->default('');
+        $table->integer('yearBorn')->default(0);
         $table->timestamps();
       });
     }
