@@ -14,11 +14,12 @@
 
 Project should now run on localhost://8888
 
-API Gitbook: https://karenscheng.gitbooks.io/book-keeper/content/
+## API Gitbook: 
+https://karenscheng.gitbooks.io/book-keeper/content/
 
-HTTP Requests:
-#
-# **GE**
+# HTTP Requests:
+
+## GET
 
 | **HTTP Request** | **Route** | **Description** |
 | :--- | :--- | :--- |
