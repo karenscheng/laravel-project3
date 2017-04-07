@@ -53,3 +53,7 @@ https://karenscheng.gitbooks.io/book-keeper/content/
 | DELETE | /books/{id} | Deletes current book stored at specific id |
 | DELETE | /authors/{id} | Deletes current author stored at specific id |
 | DELETE | /genres/{id} | Deletes current genre stored at specific id |
+
+### Personal Portfolio:
+
+http://karenscheng.com/
