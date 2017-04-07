@@ -1,4 +1,4 @@
-## Book Keeper API
+# Book Keeper API
 
 ### Running on your local machine:
 
@@ -14,12 +14,12 @@
 
 Project should now run on localhost://8888
 
-## API Gitbook: 
+### API Gitbook: 
 https://karenscheng.gitbooks.io/book-keeper/content/
 
-# HTTP Requests:
+## HTTP Requests:
 
-## GET
+### GET
 
 | **HTTP Request** | **Route** | **Description** |
 | :--- | :--- | :--- |
@@ -30,7 +30,7 @@ https://karenscheng.gitbooks.io/book-keeper/content/
 | GET | /genres | Retrieves all stored genres |
 | GET | /genres/{id} | Retrieves author with specific id |
 
-## POST
+### POST
 
 | **HTTP Request** | **Route** | **Description** |
 | :--- | :--- | :--- |
@@ -38,17 +38,17 @@ https://karenscheng.gitbooks.io/book-keeper/content/
 | POST | /authors | Adds author to database |
 | POST | /genres | Adds genre to database |
 
-## PUT
+### PUT
 
-| **HTTP Request** | Route | **Description** |
+| **HTTP Request** | **Route** | **Description** |
 | :--- | :--- | :--- |
 | PUT | /books/{id} | Replaces current book stored at specific id |
 | PUT | /authors/{id} | Replaces current author stored at specific id |
 | PUT | /genres/{id} | Replaces current genre stored at specific id |
 
-## DELETE
+### DELETE
 
-| **HTTP Request** | Route | **Description** |
+| **HTTP Request** | **Route** | **Description** |
 | :--- | :--- | :--- |
 | DELETE | /books/{id} | Deletes current book stored at specific id |
 | DELETE | /authors/{id} | Deletes current author stored at specific id |
