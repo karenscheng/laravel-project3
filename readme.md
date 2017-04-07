@@ -1,40 +1,55 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# Book Keeper API
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+### Running on your local machine:
 
-## About Laravel
+1. Create a database locally named app
+2. Download composer https://getcomposer.org/download/
+3. Pull Laravel/php project from git provider.
+4. Open the console and cd your project root directory
+5. Run composer install or php composer.phar install
+6. Run php artisan key:generate
+7. Run php artisan migrate
+8. Run php artisan db:seed to run seeders, if any.
+9. Run php artisan serve
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+Project should now run on localhost://8888
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### API Gitbook: 
+https://karenscheng.gitbooks.io/book-keeper/content/
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+## HTTP Requests:
 
-## Learning Laravel
+### GET
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+| **HTTP Request** | **Route** | **Description** |
+| :--- | :--- | :--- |
+| GET | /books | Retrieves all stored books |
+| GET | /books/{id} | Retrieves book with specific id |
+| GET | /authors | Retrieves all stored authors |
+| GET | /authors/{id} | Retrieves author with specific id |
+| GET | /genres | Retrieves all stored genres |
+| GET | /genres/{id} | Retrieves author with specific id |
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+### POST
 
-## Contributing
+| **HTTP Request** | **Route** | **Description** |
+| :--- | :--- | :--- |
+| POST | /books | Adds book to database |
+| POST | /authors | Adds author to database |
+| POST | /genres | Adds genre to database |
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+### PUT
 
-## Security Vulnerabilities
+| **HTTP Request** | **Route** | **Description** |
+| :--- | :--- | :--- |
+| PUT | /books/{id} | Replaces current book stored at specific id |
+| PUT | /authors/{id} | Replaces current author stored at specific id |
+| PUT | /genres/{id} | Replaces current genre stored at specific id |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+### DELETE
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+| **HTTP Request** | **Route** | **Description** |
+| :--- | :--- | :--- |
+| DELETE | /books/{id} | Deletes current book stored at specific id |
+| DELETE | /authors/{id} | Deletes current author stored at specific id |
+| DELETE | /genres/{id} | Deletes current genre stored at specific id |
