@@ -18,6 +18,7 @@ class GenreController extends Controller
 
   public function create (Request $request)
   {
+    //POST /genres
     Genre::create($request->all());
     return Response::json(['created' => true]);
   }
@@ -29,7 +30,7 @@ class GenreController extends Controller
 
   public function update (Request $request, $id)
   {
-    // PUT /Genres/$id
+    //PUT /genres/$id
     $genre = Genre::find($id);
     $success = $genre->update($request->all());
     return Response::json(['updated' => $success]);
@@ -37,7 +38,7 @@ class GenreController extends Controller
 
   public function destroy ($id)
   {
-    //remove a single Genre
+    //DELETE /genres/$id
     $genre = Genre::find($id);
     $genre->delete();
     return Response::json(['deleted' => true]);

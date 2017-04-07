@@ -18,18 +18,20 @@ class BookController extends Controller
 
     public function create (Request $request)
     {
+      //POST /books
       Book::create($request->all());
       return Response::json(['created' => true]);
     }
 
     public function show ($id) {
+      //GET /books/$id
       $book = Book::find($id);
       return Response::json($book);
     }
 
     public function update (Request $request, $id)
     {
-      // PUT /books/$id
+      //PUT /books/$id
       $book = Book::find($id);
       $success = $book->update($request->all());
       return Response::json(['updated' => $success]);
@@ -37,7 +39,7 @@ class BookController extends Controller
 
     public function destroy ($id)
     {
-      //remove a single book
+      //DELETE /books/$id
       $book = Book::find($id);
       $book->delete();
       return Response::json(['deleted' => true]);

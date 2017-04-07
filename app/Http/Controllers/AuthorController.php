@@ -18,18 +18,20 @@ class AuthorController extends Controller
 
   public function create (Request $request)
   {
+    //POST /authors
     Author::create($request->all());
     return Response::json(['created' => true]);
   }
 
   public function show ($id) {
+    //GET /authors/$id
     $author = Author::find($id);
     return Response::json($author);
   }
 
   public function update (Request $request, $id)
   {
-    // PUT /authors/$id
+    //PUT /authors/$id
     $author = Author::find($id);
     $success = $author->update($request->all());
     return Response::json(['updated' => $success]);
@@ -37,7 +39,7 @@ class AuthorController extends Controller
 
   public function destroy ($id)
   {
-    //remove a single Author
+    //DELETE /authors/$id
     $author = Author::find($id);
     $author->delete();
     return Response::json(['deleted' => true]);
